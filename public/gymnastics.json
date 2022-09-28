@@ -1,0 +1,50 @@
+[
+  {
+    "id": "63349db6dc01d4801ce50f2d",
+    "name": "Modern Gymnastics",
+    "img": "https://ibb.co/dchLPdv",
+    "discription": "Gymnastics, exercises for the balanced development of the body, or the competitive sport derived from these exercises",
+    "time": "300",
+    "age": "10-30"
+  },
+  {
+    "id": "63349db64147dc4c1ba68cdd",
+    "name": "Rhythmic Gymnastics",
+    "img": "https://ibb.co/YpCW454",
+    "discription": "Rhythmic gymnastics is a sport in which gymnasts perform on a floor with an apparatus: hoop, ball, clubs, ribbon or rope.",
+    "time": "120",
+    "age": "12-25"
+  },
+  {
+    "id": "63349db6cf84b02ef7c8349e",
+    "name": "Water Gymnastic",
+    "img": "https://ibb.co/hMjM4Fk",
+    "discription": "WaterGym® is a fun, water aerobics exercise workout teaching you to use water as a powerful gym to lose weight, strenghten abdominals, tone and build lean muscle, increase flexibility and more!",
+    "time": "40",
+    "age": "15-30"
+  },
+  {
+    "id": "63349db682f790a2372b5342",
+    "name": "Artistics Gymnastics",
+    "img": "https://ibb.co/PhxJ1t3",
+    "discription": "Artistic gymnastics is a discipline of gymnastics in which athletes perform short routines on different apparatuses.",
+    "time": "300",
+    "age": "10-25"
+  },
+  {
+    "id": "63349db61b1bcd33c376071d",
+    "name": "Judging Gymnastics",
+    "img": "https://ibb.co/gd3vywp",
+    "discription": "Judging is a great experience - you learn more about gymnastics, have fun and 'give back' to the sport you enjoy. ",
+    "time": "180",
+    "age": "16-30"
+  },
+  {
+    "id": "63349db68832a687ab5f4a18",
+    "name": "Acrobatic Gymnastics",
+    "img": "https://ibb.co/N3KXg0J",
+    "discription": "Acrobatic gymnastics is a competitive gymnastic discipline where partnerships of gymnasts work together and perform figures consisting of acrobatic moves, dance and tumbling, set to music.",
+    "time": "300",
+    "age": "10-25"
+  }
+]
