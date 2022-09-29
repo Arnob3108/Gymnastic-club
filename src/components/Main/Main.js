@@ -3,7 +3,7 @@ import React from "react";
 const Main = (props) => {
   const { name, img, discription, time, age } = props.list;
   return (
-    <div className="w-96 h-full items-center border-amber-500 border-solid border-2 rounded-xl flex flex-col p-3 relative">
+    <div className="w-96 h-full items-center border-amber-500 border-solid border-2 rounded-xl flex flex-col p-3 relative shadow-xl hover:scale-105 duration-700">
       <img className="w-full h-72 rounded-xl mb-2" src={img} alt="" />
       <div>
         <h1 className="text-3xl mb-5 font-bold">{name}</h1>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Activities from "../Activities/Activities";
 import Main from "../Main/Main";
-import Question from "../Question/Question";
 import "./Home.css";
 
 const Home = () => {
@@ -20,8 +19,8 @@ const Home = () => {
   };
   return (
     <div>
-      <div className="activities-container">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ml-28 mt-10">
+      <div className="activities-container ">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:ml-28 ml-10 mt-10">
           {lists.map((list) => (
             <Main
               key={list.id}
@@ -29,9 +28,6 @@ const Home = () => {
               handleActivities={handleActivities}
             ></Main>
           ))}
-          <div>
-            <Question></Question>
-          </div>
         </div>
         <div>
           <Activities timing={timing}></Activities>

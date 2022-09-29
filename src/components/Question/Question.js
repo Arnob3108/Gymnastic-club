@@ -2,7 +2,7 @@ import React from "react";
 
 const Question = () => {
   return (
-    <div>
+    <div className="mt-10 w-5/6 lg:mx-auto ml-20">
       <h1 className="text-center text-6xl font-bold mb-10 text-amber-500">
         React
       </h1>
@@ -10,7 +10,7 @@ const Question = () => {
         {/* 1st ques */}
         <label
           htmlFor="my-modal"
-          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500"
+          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500 hover:scale-105 duration-700"
         >
           How does React Work?
         </label>
@@ -36,7 +36,7 @@ const Question = () => {
         {/* 2ns ques */}
         <label
           htmlFor="my-modal2"
-          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500"
+          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500 hover:scale-105 duration-700"
         >
           Differnce between Props and Stats?
         </label>
@@ -65,7 +65,7 @@ const Question = () => {
         {/* 3ns ques */}
         <label
           htmlFor="my-modal3"
-          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500"
+          className="pb-14 lg:pb-0 my-10 btn modal-button text-lg text-amber-500 hover:scale-105 duration-700"
         >
           Where we can Use useEffect function?
         </label>

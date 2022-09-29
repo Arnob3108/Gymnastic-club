@@ -30,7 +30,7 @@ const Activities = (props) => {
       progress: undefined,
     });
     Swal.fire({
-      title: "Custom width, padding, color, background.",
+      title: "Congratulations 🎉🎉🎊🎊.",
       width: 600,
       padding: "3em",
       color: "#716add",
@@ -49,7 +49,7 @@ const Activities = (props) => {
     total = total + time.time;
   }
   return (
-    <div className="bg-base-200 h-full">
+    <div className="bg-base-200 h-full ml-16 mt-10 lg:mt-0">
       <div className="avatar h-32 flex items-start pt-5 ml-5">
         <div className="w-14 mr-5 rounded-full ring ring-warning ring-offset-base-100 ring-offset-2">
           <img src={image} alt="" />

@@ -3,9 +3,8 @@
   grid-template-columns: 4fr 1fr;
 }
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 767px) {
   .activities-container {
-    display: flex;
-    flex-direction: row;
+    grid-template-columns: 1fr;
   }
 }
