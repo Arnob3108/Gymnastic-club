@@ -18,7 +18,7 @@ const Home = () => {
   };
   return (
     <div className="activities-container">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ml-28">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ml-28 mt-10">
         {lists.map((list) => (
           <Main
             key={list.id}
