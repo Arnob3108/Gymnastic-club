@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { addToLocalStorage, getStoredItem } from "../Utilities/LocalStorage";
 import image from "./my-img.jpg";
 
 const Activities = (props) => {
-  //   console.log(props);
   const { timing } = props;
+
+  const [addbreak, setBreak] = useState(0);
+
+  useEffect(() => {
+    const storageTime = getStoredItem();
+    setBreak(storageTime);
+  }, []);
+
+  const handleWithBreakTime = (value) => {
+    setBreak(value);
+    addToLocalStorage(value);
+  };
 
   let total = 0;
   for (const time of timing) {
     total = total + time.time;
   }
   return (
-    <div className="bg-base-200 h-screen">
+    <div className="bg-base-200 h-full">
       <div className="avatar h-32 flex items-start pt-5 ml-5">
         <div className="w-14 mr-5 rounded-full ring ring-warning ring-offset-base-100 ring-offset-2">
           <img src={image} alt="" />
@@ -44,16 +56,28 @@ const Activities = (props) => {
       </div>
       <div>
         <div className="text-center border-solid border-2 border-amber-500 rounded-lg p-5 w-80 mx-auto mt-10">
-          <button className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white ">
+          <button
+            onClick={() => handleWithBreakTime(10)}
+            className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white "
+          >
             <p className="lowercase">10m</p>
           </button>
-          <button className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white mx-5">
+          <button
+            onClick={() => handleWithBreakTime(20)}
+            className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white mx-5"
+          >
             <p className="lowercase">20m</p>
           </button>
-          <button className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white">
+          <button
+            onClick={() => handleWithBreakTime(30)}
+            className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white"
+          >
             <p className="lowercase">30m</p>
           </button>
-          <button className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white ml-5">
+          <button
+            onClick={() => handleWithBreakTime(40)}
+            className="btn btn-circle btn-outline btn-warning focus:bg-amber-500 focus:text-white ml-5"
+          >
             <p className="lowercase">40m</p>
           </button>
         </div>
@@ -68,7 +92,7 @@ const Activities = (props) => {
           <h2 className="text-xl font-semibold">Gymnastic Time</h2>
           <p>
             <span className="text-amber-500 font-extrabold text-lg">
-              {total}
+              {total + " "}
             </span>
             minutes
           </p>
@@ -77,7 +101,9 @@ const Activities = (props) => {
         <div className="flex justify-between p-4 border-solid border-2 border-amber-500 mt-3 rounded-lg">
           <h2 className="text-xl font-semibold">Break Time</h2>
           <p>
-            <span className="text-amber-500 font-extrabold text-lg"></span>
+            <span className="text-amber-500 font-extrabold text-lg">
+              {addbreak + " "}
+            </span>
             minutes
           </p>
         </div>

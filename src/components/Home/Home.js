@@ -14,7 +14,6 @@ const Home = () => {
   }, []);
 
   const handleActivities = (lists) => {
-    console.log(lists);
     const newTiming = [...timing, lists];
     setTiming(newTiming);
   };
