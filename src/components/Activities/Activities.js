@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 import { addToLocalStorage, getStoredItem } from "../Utilities/LocalStorage";
 import image from "./my-img.jpg";
 
@@ -18,7 +19,30 @@ const Activities = (props) => {
     addToLocalStorage(value);
   };
 
-  const handleActivity = () => {};
+  const handleActivity = () => {
+    toast("🦄 Wow Your Activity Done!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    Swal.fire({
+      title: "Custom width, padding, color, background.",
+      width: 600,
+      padding: "3em",
+      color: "#716add",
+      background: "#fff url(/images/trees.png)",
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+    });
+  };
 
   let total = 0;
   for (const time of timing) {
@@ -38,17 +62,17 @@ const Activities = (props) => {
       <div className="grid grid-cols-3 text-center border-solid border-2 border-amber-500 rounded-lg p-5 w-80 mx-auto gap-7">
         <div>
           <h1 className="text-4xl text-amber-500 font-bold">
-            75<span className="text-indigo-300 text-lg">kg</span>
+            80<span className="text-indigo-300 text-lg">kg</span>
           </h1>
           <h4 className="text-lg text-indigo-500 font-semibold">Weight</h4>
         </div>
         <div>
-          <h1 className="text-4xl text-amber-500 font-bold">5.8</h1>
+          <h1 className="text-4xl text-amber-500 font-bold">5.6</h1>
           <h4 className="text-lg text-indigo-500 font-semibold">Height</h4>
         </div>
         <div>
           <h1 className="text-4xl text-amber-500 font-bold">
-            22<span className="text-indigo-300 text-lg">yrs</span>
+            24<span className="text-indigo-300 text-lg">yrs</span>
           </h1>
           <h4 className="text-lg text-indigo-500 font-semibold">Age</h4>
         </div>
@@ -113,7 +137,10 @@ const Activities = (props) => {
       </div>
       {/* activities done section  */}
       <div className="mt-10">
-        <button className="btn btn-wide btn-success border-amber-500 btn-outline focus:bg-amber-500 block mx-auto">
+        <button
+          onClick={handleActivity}
+          className="btn btn-wide btn-success border-amber-500 btn-outline focus:bg-amber-500 block mx-auto"
+        >
           Activity Completed
         </button>
       </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Activities from "../Activities/Activities";
 import Main from "../Main/Main";
+import Question from "../Question/Question";
 import "./Home.css";
 
 const Home = () => {
@@ -18,18 +19,23 @@ const Home = () => {
     setTiming(newTiming);
   };
   return (
-    <div className="activities-container">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ml-28 mt-10">
-        {lists.map((list) => (
-          <Main
-            key={list.id}
-            list={list}
-            handleActivities={handleActivities}
-          ></Main>
-        ))}
-      </div>
-      <div>
-        <Activities timing={timing}></Activities>
+    <div>
+      <div className="activities-container">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ml-28 mt-10">
+          {lists.map((list) => (
+            <Main
+              key={list.id}
+              list={list}
+              handleActivities={handleActivities}
+            ></Main>
+          ))}
+          <div>
+            <Question></Question>
+          </div>
+        </div>
+        <div>
+          <Activities timing={timing}></Activities>
+        </div>
       </div>
     </div>
   );
