@@ -5,7 +5,7 @@ import "./Home.css";
 
 const Home = () => {
   const [lists, setList] = useState([]);
-  const [timeing, setTiming] = useState([]);
+  const [timing, setTiming] = useState([]);
 
   useEffect(() => {
     fetch("gymnastics.json")
@@ -13,8 +13,10 @@ const Home = () => {
       .then((data) => setList(data));
   }, []);
 
-  const handleActivities = (list) => {
-    console.log(list);
+  const handleActivities = (lists) => {
+    console.log(lists);
+    const newTiming = [...timing, lists];
+    setTiming(newTiming);
   };
   return (
     <div className="activities-container">
@@ -28,7 +30,7 @@ const Home = () => {
         ))}
       </div>
       <div>
-        <Activities></Activities>
+        <Activities timing={timing}></Activities>
       </div>
     </div>
   );

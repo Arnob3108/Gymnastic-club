@@ -12,7 +12,7 @@ const Main = (props) => {
         <p className="text-xl font-semibold mb-12">Duration: {time}M</p>
       </div>
       <button
-        onClick={() => props.handleActivities(time)}
+        onClick={() => props.handleActivities(props.list)}
         className="btn btn-outline btn-success font-bold w-full absolute bottom-0"
       >
         Add Activitis
