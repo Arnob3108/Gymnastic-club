@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { addToLocalStorage, getStoredItem } from "../Utilities/LocalStorage";
 import image from "./my-img.jpg";
 
@@ -16,6 +17,8 @@ const Activities = (props) => {
     setBreak(value);
     addToLocalStorage(value);
   };
+
+  const handleActivity = () => {};
 
   let total = 0;
   for (const time of timing) {
